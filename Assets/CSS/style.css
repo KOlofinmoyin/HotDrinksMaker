@@ -79,3 +79,34 @@ h1 {
   top: 690px;
   left: 80px;
 }
+
+.welcome {
+  font-family: "Fredericka the Great", serif;
+  text-align: center;
+}
+
+#brew {
+  position: relative;
+  top: 200px;
+  /* left: 80px; */
+  display: none;
+  text-align: center;
+}
+
+#screen_container {
+  text-align: center;
+}
+
+.displayProgress {
+  top: 200px;
+  font-family: "Fredericka the Great", serif;
+  font-weight: bolder;
+  font-size: 18;
+}
+
+#preparing {
+  position: relative;
+  top: 200px;
+  display: inline-block;
+  text-align: left;
+}
