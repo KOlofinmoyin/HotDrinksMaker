@@ -1,28 +1,26 @@
 $(document).ready(function () {
   let screen = document.getElementById("screen");
 
-  let loading = setTimeout(() => {
-    screen.innerHTML = "Loading...";
-  }, 1000);
+  //   A dummy list of messages simulating asynchronous messages displayed from the network
+  let fakeNetworkMessages = [
+    "Loading...",
+    "Connecting to Network...",
+    "Loading flavours...",
+    "Connected! 👍🏾",
+  ];
 
-  const network = setTimeout(() => {
-    screen.innerHTML = "Connecting to Network...";
-  }, 2000);
+  for (let timeTaken = 0; timeTaken < fakeNetworkMessages.length; timeTaken++) {
+    screen.innerHTML = fakeNetworkMessages[timeTaken];
+  }
 
-  const flavours = setTimeout(() => {
-    screen.innerHTML = "Loading flavours...";
-  }, 3000);
-
-  const connected = setTimeout(() => {
-    screen.innerHTML = "Connected! 👍🏾";
-  }, 4000);
-
+  //   Hot-Drinks machine 'Welcome' state
   let welcomeInterval;
 
   const setWelcomeMessage = () => {
     screen.innerHTML = `<h2 class="welcome">Welcome, please select a hot drink!</h2>`;
   };
 
+  //   Welcome state selection-message effect
   welcomeInterval = setInterval(setWelcomeMessage, 5000);
 
   $(function () {
@@ -40,6 +38,7 @@ $(document).ready(function () {
     fadeInOut();
   });
 
+  //   Prepare Lemon Tea
   $("#lemonTeaButton").on("click", function () {
     $("#brew").show();
     let preparing = lemonTea();
@@ -74,6 +73,98 @@ $(document).ready(function () {
         }
 
         if (i === lemonTeaDrink["Lemon Tea"].length) {
+          preparing += `${i + 1}. Ready. <br>`;
+          $("#preparing").html(preparing);
+        }
+      }
+    };
+
+    displayNextLine();
+
+    return preparing;
+  };
+
+  //   Prepare Coffee
+  $("#coffeeButton").on("click", function () {
+    $("#brew").show();
+    let preparing = coffee();
+    $("#preparing").html(preparing);
+    clearInterval(welcomeInterval);
+    screen.innerHTML = "";
+  });
+
+  const coffee = () => {
+    let coffeePreparation = {
+      Coffee: [
+        "Boil some water",
+        "Brew the coffee grounds",
+        "Pour coffee in the cup",
+        "Add sugar and milk",
+      ],
+    };
+
+    let preparing = `<p class="displayProgress"> Making ${
+      Object.keys(coffeePreparation)[0]
+    }:</p><br>`;
+    let i = 0;
+
+    const displayNextLine = () => {
+      if (i < coffeePreparation["Coffee"].length) {
+        preparing += `${i + 1}. ${coffeePreparation["Coffee"][i]}<br>`;
+        $("#preparing").html(preparing);
+        i++;
+
+        if (i < coffeePreparation["Coffee"].length) {
+          setTimeout(displayNextLine, 2000);
+        }
+
+        if (i === coffeePreparation["Coffee"].length) {
+          preparing += `${i + 1}. Ready. <br>`;
+          $("#preparing").html(preparing);
+        }
+      }
+    };
+
+    displayNextLine();
+
+    return preparing;
+  };
+
+  //   Prepare Chocolate
+  $("#chocolateButton").on("click", function () {
+    $("#brew").show();
+    let preparing = chocolate();
+    $("#preparing").html(preparing);
+    clearInterval(welcomeInterval);
+    screen.innerHTML = "";
+  });
+
+  const chocolate = () => {
+    let chocolatePreparation = {
+      Chocolate: [
+        "Boil some water",
+        "Brew the coffee grounds",
+        "Pour coffee in the cup",
+        "Add sugar and milk",
+      ],
+    };
+
+    let preparing = `<p class="displayProgress"> Making ${
+      Object.keys(chocolatePreparation)[0]
+    }:</p><br>`;
+    let i = 0;
+
+    const displayNextLine = () => {
+      if (i < chocolatePreparation["Chocolate"].length) {
+        preparing += `${i + 1}. ${chocolatePreparation["Chocolate"][i]}<br>`;
+        $("#preparing").html(preparing);
+        i++;
+
+        if (i < chocolatePreparation["Chocolate"].length) {
+          setTimeout(displayNextLine, 2000);
+        }
+
+        if (i === chocolatePreparation["Chocolate"].length) {
           preparing += `${i + 1}. Ready. <br>`;
           $("#preparing").html(preparing);
         }
