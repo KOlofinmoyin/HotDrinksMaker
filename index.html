@@ -4,16 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/CSS/style.css">
     <title>Hot Drinks Maker</title>
 </head>
 
 <body>
+    <h1>Hot Drinks Maker</h1>
 
-    <div id="hotDrinksMaker">
-        <img src="Assets/Images/drinkbuttons.png" alt="Hot Drinks Maker" id="drinkImage">
-        <div id="lemonTeaButton" class="hot-drink-button">Lemon Tea</div>
-        <div id="coffeeButton" class="hot-drink-button">Coffee</div>
-        <div id="chocolateButton" class="hot-drink-button">Chocolate</div>
+    <div id="hotDrinksMaker" class="row">
+        <div class="column left">
+            <img src="Assets/Images/drinkbuttons.png" alt="Hot Drinks Maker" id="drinkImage">
+            <div id="lemonTeaButton" class="hot-drink-button">
+            </div>
+            <div id="coffeeButton" class="hot-drink-button">
+            </div>
+            <div id="chocolateButton" class="hot-drink-button">
+            </div>
+
+            <div id="lemonTeaLabel" class="hot-drink-labels">
+                <h2>Lemon Tea</h2>
+            </div>
+            <div id="coffeeLabel" class="hot-drink-labels">
+                <h2>Coffee</h2>
+            </div>
+            <div id="chocolateLabel" class="hot-drink-labels">
+                <h2>Chocolate</h2>
+            </div>
+
+        </div>
+        <div class="column right">
+            <div id="screen">
+                Making Coffee...
+
+            </div>
+        </div>
     </div>
 
 
