@@ -74,4 +74,4 @@ A modelling of the operation of a hot drinks machine.
 - And my drink is prepared for my enjoyment
 ```
 
-<a href="https://github.com/users/KOlofinmoyin/projects/7/views/1"> _Known issue: Executing tests to 'Make a cup of Lemon Tea', 'Coffee' or 'Chocolate', results in Error: Timeout of 30000ms exceeded. For async tests and hooks, ensure "done()" is called; if returning a Promise, ensure it resolves._ </a>
+<a href="https://github.com/users/KOlofinmoyin/projects/7/views/1"> _**Known issues**_ </a>
