@@ -143,9 +143,8 @@ $(document).ready(function () {
     let chocolatePreparation = {
       Chocolate: [
         "Boil some water",
-        "Brew the coffee grounds",
-        "Pour coffee in the cup",
-        "Add sugar and milk",
+        "Add drinking chocolate powder to the water",
+        "Pour chocolate in the cup",
       ],
     };
 
