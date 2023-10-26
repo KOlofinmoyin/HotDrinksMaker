@@ -1,0 +1,81 @@
+h1 {
+  font-family: "Fredericka the Great", serif;
+  font-size: xxx-large;
+}
+
+.row {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 5px;
+  width: 700px;
+}
+
+.left {
+  width: 30%;
+}
+
+.right {
+  border: 1px solid black;
+  width: 70%;
+}
+
+/* Drink buttons */
+.hot-drink-button {
+  position: absolute;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+  width: 156px;
+  height: 156px;
+  border-radius: 50%;
+}
+
+.hot-drink-button:hover {
+  background: #efefef;
+  opacity: 0.2;
+  cursor: pointer;
+  color: #fff !important;
+  transition: 0.7s;
+}
+
+#lemonTeaButton {
+  top: 160px;
+  left: 42px;
+  transition: box-shadow 0.1s;
+}
+
+#coffeeButton {
+  top: 370px;
+  left: 42px;
+}
+
+#chocolateButton {
+  top: 580px;
+  left: 42px;
+}
+
+/* Drink labels */
+.hot-drink-labels {
+  position: absolute;
+  background: transparent;
+  border: none;
+  font-size: 12px;
+  color: white;
+}
+
+#lemonTeaLabel {
+  top: 260px;
+  left: 80px;
+}
+
+#coffeeLabel {
+  top: 475px;
+  left: 90px;
+}
+
+#chocolateLabel {
+  top: 690px;
+  left: 80px;
+}
